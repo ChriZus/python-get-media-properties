@@ -5,18 +5,18 @@ README = Path(__file__).resolve().parent / 'README.md'
 
 if __name__ == '__main__':
     setup(
-        name='get-video-properties',
+        name='get-media-properties',
 
         version='0.1.1',
 
-        description='Get video properties',
+        description='Get media properties',
         long_description=README.read_text(encoding='utf-8'),
         long_description_content_type='text/markdown',
 
-        url='https://github.com/mvasilkov/python-get-video-properties',
+        url='https://github.com/ChriZus/python-get-media-properties',
 
-        author='Mark Vasilkov',
-        author_email='mvasilkov@gmail.com',
+        author='Chris',
+        author_email='chrizus@gmail.com',
 
         license='MIT',
 
@@ -30,15 +30,16 @@ if __name__ == '__main__':
             'Topic :: Multimedia :: Video',
         ],
 
-        keywords='ffprobe video audio',
+        keywords='ffprobe video audio subtitle',
 
         packages=find_packages(),
         include_package_data=True,
 
         entry_points={
             'console_scripts': [
-                'videoprops=videoprops:run',
-                'audioprops=videoprops:run2',
+                'videoprops=mediaprops:run',
+                'audioprops=mediaprops:run2',
+                'subtitleprops=mediaprops:run3',
             ],
         },
     )
