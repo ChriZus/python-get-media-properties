@@ -16,6 +16,7 @@ P = namedtuple('P', 'title ffprobe_args')
 
 P_VIDEO = P('video', (*_args_quiet, '-select_streams', 'v:0', *_args_print))
 P_AUDIO = P('audio', (*_args_quiet, '-select_streams', 'a:0', *_args_print))
+P_SUB = P('subtitle', (*_args_quiet, '-select_streams', 's:0', *_args_print))
 
 binary_dependencies = Path(__file__).parent / 'binary_dependencies'
 system = platform.system()
@@ -65,6 +66,8 @@ def get_video_properties(movie: str):
 def get_audio_properties(movie: str):
     return get_stream_properties(movie, *P_AUDIO)
 
+def get_sub_properties(movie: str):
+    return get_stream_properties(movie, *P_SUB)
 
 def pretty_print(a):
     print(json.dumps(a, indent=2))
