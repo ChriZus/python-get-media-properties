@@ -1,20 +1,20 @@
-python-get-video-properties
+python-get-media-properties
 ===
 
-Get video properties
+Get media properties
 
 Installation
 ---
 
 ```sh
-pip install -U get-video-properties
+pip install -U get-media-properties
 ```
 
 Usage
 ---
 
 ```python
-from videoprops import get_video_properties
+from mediaprops import get_video_properties
 
 props = get_video_properties('movie.mp4')
 
@@ -39,7 +39,7 @@ Usage (audio)
 ---
 
 ```python
-from videoprops import get_audio_properties
+from mediaprops import get_audio_properties
 
 props = get_audio_properties('movie.mp4')
 
@@ -58,10 +58,4 @@ Channels: 2
 Sample rate: 48000
 ```
 
-Command-line usage
----
 
-```sh
-videoprops movie.mp4
-audioprops movie.mp4
-```
